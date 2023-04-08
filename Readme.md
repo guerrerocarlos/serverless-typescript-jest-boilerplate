@@ -4,6 +4,25 @@
  - Simple packaging
  - Jest pre-configured ready for TDD
 
+## How to use:
+
+### Run Locally
+
+ - Clone repo
+ - run `yarn install`
+ - set REGION, S3_BUCKET, DOMAIN and SUB_DOMAIN env variables
+ - run `yarn offline`
+
+### Deploy from local
+
+Same as `Locally`, setup the AWS required policies bellow and execute: 
+
+ - `yarn deploy`
+
+ ### Deploy from Github Actions
+
+Setup `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` env variables and just push to any branch.
+
 ## AWS required policies:
 
 Recommended AWS policies:
