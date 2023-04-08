@@ -38,7 +38,7 @@ jobs:
 
       - name: Install node_modules
         if: steps.node-modules-cache.outputs.cache-hit != 'true'
-        run: yarn install --production
+        run: yarn install
 
       - name: Serverless Deploy
         run: yarn run deploy --stage "$BRANCH_REF_SLUG" --region "$REGION" --verbose
