@@ -113,7 +113,7 @@ functions:
 
 custom:
   customDomain:
-    domainName: ${opt:stage, self:provider.stage}-${env:DOMAIN}
+    domainName: ${opt:stage, self:provider.stage}-${env:SUBDOMAIN}.${env:DOMAIN}
     stage: ${opt:stage, self:provider.stage}
     basePath: ""
     certificateName: "*.${env:DOMAIN}"

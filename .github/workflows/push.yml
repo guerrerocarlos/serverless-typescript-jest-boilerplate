@@ -10,6 +10,7 @@ env:
   REGION: "us-east-2"
   S3_BUCKET: "www.carlosguerrero.com"
   DOMAIN: "carlosguerrero.com"
+  SUBDOMAIN: "lambda-boilerplate"
 
 jobs:
   deploy:
