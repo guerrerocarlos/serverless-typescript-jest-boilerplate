@@ -6,8 +6,10 @@ env:
   COMMIT_SHA: "${{ github.sha }}"
   GIT_REF: "${{ github.ref }}"
   LOG_LEVEL: "WARN"
+
   REGION: "us-east-2"
-  S3_BUCKET: "example-bucket"
+  S3_BUCKET: "www.carlosguerrero.com"
+  DOMAIN: "carlosguerrero.com"
 
 jobs:
   deploy:

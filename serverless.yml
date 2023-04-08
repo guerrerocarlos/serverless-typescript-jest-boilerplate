@@ -18,15 +18,15 @@ provider:
         - Effect: "Allow"
           Action:
             - "s3:*"
-          Resource: "arn:aws:s3:::S3_BUCKET"
+          Resource: "arn:aws:s3:::${env:S3_BUCKET}"
         - Effect: "Allow"
           Action:
             - "s3:*"
-          Resource: "arn:aws:s3:::S3_BUCKET/"
+          Resource: "arn:aws:s3:::${env:S3_BUCKET}/"
         - Effect: "Allow"
           Action:
             - "s3:*"
-          Resource: "arn:aws:s3:::S3_BUCKET/*"
+          Resource: "arn:aws:s3:::${env:S3_BUCKET}/*"
   environment:
     S3_BUCKET: ${env:S3_BUCKET}
 
@@ -113,10 +113,10 @@ functions:
 
 custom:
   customDomain:
-    domainName: ${opt:stage, self:provider.stage}-SET_DOMAIN
+    domainName: ${opt:stage, self:provider.stage}-${env:DOMAIN}
     stage: ${opt:stage, self:provider.stage}
     basePath: ""
-    certificateName: "*.SET_DOMAIN"
+    certificateName: "*.${env:DOMAIN}"
     createRoute53Record: false
     createRoute53IPv6Record: false
     endpointType: REGIONAL
